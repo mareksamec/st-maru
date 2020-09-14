@@ -18,13 +18,13 @@ These st patches are included in the build for convenience:
 
 
 ## Keyboard shortcuts
-**Scrollback**: Shift + Page Up/Page Down
-**Start keyboard movement mode:** Shift + Esc
-	- move with h, j, k, l
-	- input mode and search up/down: / or ?
-	- toggle/untoggle select mode: s
-	- copy selection and quit selection mode (keep selection highlighted): Enter
-	- copy selection and quit selction mode (no highlight): Esc
+* **Scrollback**: Shift + Page Up/Page Down
+* **Start keyboard movement mode:** Shift + Esc
+	* move with h, j, k, l
+	* input mode and search up/down: / or ?
+	* toggle/untoggle select mode: s
+	* copy selection and quit selection mode (keep selection highlighted): Enter
+	* copy selection and quit selction mode (no highlight): Esc
 
 Other keyboard shortucts from keyboard_select patch remain unchanged, see:
 https://st.suckless.org/patches/keyboard_select/
