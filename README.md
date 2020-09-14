@@ -15,6 +15,37 @@ These st patches are included in the build for convenience:
 - **st-font2** - Allows settings of the second font in config.h (for special characters in airline/powerline or emoji)
 - **scrollback** - Enables scrollback in suckless terminal.
 
-## TODO:
-Add keyboard shortcuts description
 
+
+## Keyboard shortcuts
+**Scrollback**: Shift + Page Up/Page Down
+**Start keyboard movement mode:** Shift + Esc
+	- move with h, j, k, l
+	- input mode and search up/down: / or ?
+	- toggle/untoggle select mode: s
+	- copy selection and quit selection mode (keep selection highlighted): Enter
+	- copy selection and quit selction mode (no highlight): Esc
+
+Other keyboard shortucts from keyboard_select patch remain unchanged, see:
+https://st.suckless.org/patches/keyboard_select/
+
+## Mouse
+Mouse selection is automatically copied to the SELECT clipboard
+Use right click to paste (yes putty style paste is enabled)
+
+Set the paste to middle-button:
+
+Open up config.h in your favourite editor and change the button to here to Button2:
+```c
+static MouseShortcut mshortcuts[] = {
+	/* mask                 button   function        argument       release */
+	{ XK_ANY_MOD,           Button3, selpaste,       {.i = 0},      1 },
+
+```
+Now recompile with:
+```
+sudo make clean install
+```
+
+## TODO:
+Add some more keyboard shortcuts, description etc
